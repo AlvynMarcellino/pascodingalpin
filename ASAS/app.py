@@ -5,7 +5,6 @@ import mysql.connector
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
-# Koneksi ke database
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",

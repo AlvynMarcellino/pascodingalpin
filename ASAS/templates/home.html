@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+{% block konten %}
+<div class="login-container">
+    <div class="login-box">
+        <h1>Login ke Sistem</h1>
+        <form action="/aksi_login" method="post">
+            <label for="user">Username</label>
+            <input type="text" id="user" name="username" placeholder="Masukkan username" required>
+            
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="password" placeholder="Masukkan password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <a href="perpustakaan" class="back-link">Kembali ke Perpustakaan</a>
+    </div>
+    <div class="hint">
+        <p><i>Username: admin</i></p>
+        <p><i>Password: 4321</i></p>
+    </div>
+</div>
+
+<style>
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        font-family: Arial, sans-serif;
+    }
+
+    .login-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
+    }
+
+    .login-box h1 {
+        margin-bottom: 20px;
+        font-size: 22px;
+        color: #333;
+    }
+
+    .login-box label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .login-box button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007BFF;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-box button:hover {
+        background-color: #0056b3;
+    }
+
+    .login-box .back-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007BFF;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .login-box .back-link:hover {
+        text-decoration: underline;
+    }
+
+    .hint {
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+    }
+
+    .hint p {
+        margin: 5px 0;
+    }
+</style>
+{% endblock %}

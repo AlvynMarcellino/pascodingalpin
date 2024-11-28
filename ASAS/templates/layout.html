@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT X</title>
+</head>
+<style>
+    * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    .login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    
+    form {
+      background-color: #f4f4f4;
+      padding: 30px;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 310px;
+    }
+    
+    label {
+      margin-top: 10px;
+    }
+    
+    input {
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+  
+    i {
+      margin-top: 0;
+      display: block;
+      font-size: 20px;
+    }
+    .login a{
+      margin-top: 10px;
+      color: black;
+      font-size: 12px;
+    }
+    .login a:hover{
+      margin-top: 10px;
+      color: red;
+      font-size: 12px;
+    }
+  </style>
+<body>
+    {% block konten %}   
+    {% endblock %}
+</body>
+</html>

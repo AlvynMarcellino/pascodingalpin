@@ -1,0 +1,13 @@
+{% extends 'layout_admin.html' %}
+
+{% block konten %}
+    <div class="container">
+        <h1 class="input">INPUT DATA NILAI SISWA</h1>
+        <form action="/tambah" method="post">
+            <input type="text" name="nama" placeholder="Nama Siswa" required><br>
+            <input type="text" name="mata_pelajaran" placeholder="Mata Pelajaran" required><br>
+            <input type="number" name="nilai" placeholder="Nilai" min="0" max="100" required><br>
+            <button type="submit">SIMPAN</button>
+        </form>
+    </div>
+{% endblock %}

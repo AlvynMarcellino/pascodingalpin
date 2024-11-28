@@ -1,0 +1,37 @@
+{% extends 'layout_admin.html' %}
+
+{% block konten %}
+    <div class="containtable">
+        {% if data %}
+        <table style="width: 100%; text-align: center; border-spacing: 10px; border-collapse: collapse;">
+            <thead style="background-color: #007BFF; color: white;">
+                <tr> 
+                    <th>NAMA</th>
+                    <th>KELAS</th>
+                    <th>BUKU</th>
+                    <th>TANGGAL PEMINJAMAN</th>
+                    <th>TANGGAL PENGEMBALIAN</th>
+                    <th>OPSI</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in data %}
+                <tr style="background-color: {% cycle '#f9f9f9', '#ffffff' %};">
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>{{ result[3] }}</td>
+                    <td>{{ result[4].strftime('%d %B %Y') }}</td>
+                    <td>{{ result[5].strftime('%d %B %Y') }}</td>
+                    <td>
+                        <a href="/update/{{ result[0] }}" style="color: #007BFF; text-decoration: none;">UPDATE</a> - 
+                        <a href="/hapus/{{ result[0] }}" style="color: red; text-decoration: none;" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">SELESAI</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p style="text-align: center; font-size: 18px; color: #555;">Tidak ada data tersedia.</p>
+        {% endif %}
+    </div>
+{% endblock %}
